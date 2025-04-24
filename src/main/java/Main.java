@@ -1,4 +1,5 @@
 import core.ThsCore;
+import thsCrack.fjc;
 
 import java.io.FileInputStream;
 import java.util.Scanner;
@@ -6,6 +7,12 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+
+        thsbase64 thsb64=new thsbase64();
+        System.out.println(new String(thsb64.encode("12345678901234567890\n\r".getBytes())));
+        System.out.println(new String(thsb64.decode("mExloMvOolf5mMeLmls1oWBFPEawMs==".getBytes())));
+
+        System.exit(0);
         ThsCore thsCore = new ThsCore();
         //创建一个新的连接到同花顺服务器
         if (!thsCore.connectThsServer()) {
