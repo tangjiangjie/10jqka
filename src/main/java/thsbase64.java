@@ -14,7 +14,6 @@ import java.util.List;
  */
 public class thsbase64 {
     public static final thsbase64 INSTANCE = new thsbase64();
-
     private final char[] chars;
 
     private final int[] INV = new int[256];
